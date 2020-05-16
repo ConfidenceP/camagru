@@ -1,0 +1,609 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Global */
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 3px solid #e8491d;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .current a {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Gallery */
+
+#gallery {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.heading {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.gallery-container {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.gallery-container>div {
+    max-width: 400px;
+    margin: auto;
+}
+
+.gallery-container div img {
+    width: 90%;
+    height: 300px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px dotted #e8491d;
+}
+
+.gallery-desc {
+    text-align: center;
+}
+
+.fa-comments,
+.fa-trash {
+    color: #e8491d;
+}
+
+.fa-heart {
+    color: #4CAF50;
+}
+
+.liked {
+    color: #e8491d;
+}
+
+
+/* footer */
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+}
+
+
+/* Modal */
+
+
+/* Full-width input fields */
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Set a style for all buttons */
+
+button,
+input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+span.psw {
+    /* float: right; */
+    margin-left: 30px;
+    padding-top: 16px;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+    text-align: center;
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button (x) */
+
+.close {
+    float: right;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+
+/* alerts */
+
+.alert {
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+/* The close button */
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* When moving the mouse over the close button */
+
+.closebtn:hover {
+    color: black;
+}
+
+.red {
+    background-color: #f44336;
+    /* Red */
+}
+
+.success {
+    background-color: #6ABC6D;
+    /* Red */
+}
+
+.warning {
+    background-color: #ffc107;
+}
+
+#canvas {
+    display: none;
+}
+
+
+/* Dashboard */
+
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+.top-container {
+    width: 500px;
+    margin: 30px auto;
+}
+
+.btn {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.btn-dark {
+    background: #333;
+    color: #fff;
+    border: #666 1px solid;
+}
+
+.btn-light {
+    background: #f4f4f4;
+    color: #333;
+    border: #ccc 1px solid;
+}
+
+.select {
+    height: 40px;
+    background: #333;
+    color: #fff;
+    padding: 3px;
+    width: 300px;
+    border: 1px #666 solid;
+    margin-bottom: 10px;
+}
+
+.column {
+    float: left;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+}
+
+.left {
+    width: 20%;
+}
+
+.right {
+    width: 70%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bottom-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+}
+
+#photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+#photos img {
+    width: 400px;
+    height: 300px;
+    border: 3px #fff solid;
+}
+
+.notification {
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.notification .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+}
+
+
+/* The message box is shown when the user clicks on the password field */
+
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.different {
+    margin-left: 30%;
+    width: 20%;
+    margin-right: 30%;
+}
+
+.top-container {
+    width: 500px;
+    margin: 30px auto;
+}
+
+.bottom-container {
+    max-width: 960px;
+    margin-top: 65px;
+    padding: 10px;
+}
+
+
+/*  SECTIONS  */
+
+.section {
+    clear: both;
+    padding: 0px;
+    margin-left: 2%;
+}
+
+
+/*  COLUMN SETUP  */
+
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+
+/*  GROUPING  */
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+    /* For IE 6/7 */
+}
+
+
+/*  GRID OF TWO  */
+
+.span_2_of_2 {
+    width: 70%;
+}
+
+.span_1_of_2 {
+    width: 30%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .span_2_of_2,
+    .span_1_of_2 {
+        width: 100%;
+    }
+}
+
+@media(min-width: 5120px) {
+    #overlay {
+        right: 100px;
+    }
+}
+
+
+/* sticky footer */
+
+.push {
+    height: 444px;
+}
