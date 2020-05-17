@@ -22,6 +22,7 @@ catch(PDOException $e)
 try{
     $sql = "CREATE DATABASE IF NOT EXISTS ".$DB_NAME;
     $db->exec($sql);
+    echo "Database " . $DB_NAME . " created successfully <br>";
 } catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }

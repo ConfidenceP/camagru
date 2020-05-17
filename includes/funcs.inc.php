@@ -415,22 +415,13 @@ function regmail($email, $token) {
     $subject = 'Activate your Camagru account';
 
     // Message
-    $body = '
-        <html>
-        <head>
-        <title>Activate your Camagru account</title>
-        </head>
-        <body>
-        <p>To activate your Camagru account click <a href="http://localhost:8080/camagru/includes/activate.php?activate='. $token.'">here.</a></p>
-        </body>
-        </html>
-        ';
+    $body = 'Activate your Camagru account. To activate your Camagru account click <a href="http://localhost:8080/camagru/includes/activate.php?activate='. $token.'">here.</a>';
     // To send HTML mail, the Content-type header must be set
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
     $from = "Confidence";
-    $to = 'cmcmukwindidza26@gmail.com';
+    $to = $email;
 
     $host = "ssl://smtp.gmail.com";
     $port = "465";
@@ -574,9 +565,11 @@ function saveimg($img, $overlay,$conn) {
 
     if (strpos($img, 'data:image') !== false) {
         file_put_contents('../images/raw/temp.png', base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $img)));
+        $first = imagecreatefrompng('../images/raw/temp.png');
+    } else {
+        $first = imagecreatefrompng('../images/raw/'.$img);
     }
     $second = imagecreatefrompng('.'.$overlay);
-    $first = imagecreatefrompng('../images/raw/temp.png');
 
     imagecopy($first,$second,0,0,0,0,500,500);
 
@@ -593,6 +586,7 @@ function saveimg($img, $overlay,$conn) {
     } catch (Exception $e) {
         echo 'Error: ' . $e->getMessage();
     }
+    header('Location: ../dashboard.php?gallery=true');
 }
 
 
