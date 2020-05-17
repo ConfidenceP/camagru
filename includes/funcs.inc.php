@@ -463,16 +463,9 @@ function commentemail($img, $conn) {
         $subject = 'New comment from Camagru';
 
         // Message
-        $body = '
-            <html>
-            <head>
-            <title>New Comment from Camagru</title>
-            </head>
-            <body>
-            <p>'.$_SESSION['username'].' commented on your picture click <a href="http://localhost:8080/camagru/dashboard.php?comment=true&imgkey='. $img .'">here to view comment.</a></p>
-            </body>
-            </html>
-            ';
+        $body = 'New Comment from Camagru
+            
+            '.$_SESSION['username'].' commented on your picture. Follow link to view the comment http://localhost:8080/camagru/dashboard.php?comment=true&imgkey='. $img .'';
 
         // To send HTML mail, the Content-type header must be set
         $headers[] = 'MIME-Version: 1.0';
@@ -511,16 +504,9 @@ function pwdmail($email, $token) {
     $subject = 'Reset Camagru account password';
 
     // Message
-    $body = '
-        <html>
-        <head>
-        <title>Reset your Camagru account password</title>
-        </head>
-        <body>
-        <p>To reset your Camagru account password click <a href="http://localhost:8080/camagru/includes/funcs.inc.php?reset=true&email='.$email.'&token='. $token.'">here.</a></p>
-        </body>
-        </html>
-        ';
+    $body = 'Reset your Camagru account password.
+        
+        You have asked to reset your password. Follow link to enter create a new password: http://localhost:8080/camagru/includes/funcs.inc.php?reset=true&email='.$email.'&token='. $token.'';
 
     // To send HTML mail, the Content-type header must be set
     $headers[] = 'MIME-Version: 1.0';

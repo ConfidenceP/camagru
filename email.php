@@ -37,10 +37,3 @@ $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 $headers[] = 'To: Confidence <mukwindidzacp@gmail.com>';
 $headers[] = 'From: Birthday Reminder <birthday@example.com>';
 echo md5(md5(time().'jaggernaut'.rand(0,9999)));
-// Mail it
-// if (mail($to, $subject, $message, implode("\r\n", $headers))) {
-//     echo "zvaita";
-// }
-// else{
-//     echo "zvaramba";
-// }
