@@ -1,6 +1,3 @@
-<?php
-var_dump($_POST);
-?>
 <div class="different">
     <div style="height:77vh;">
         <h3>Choose Image</h3>

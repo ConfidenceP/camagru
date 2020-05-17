@@ -446,7 +446,7 @@ function regmail($email, $token) {
 
 }
 
-function commentemail($img, $conn, $email) {
+function commentemail($img, $conn) {
     try{
         $access = $conn->prepare('SELECT users.email, users.notify FROM users INNER JOIN images ON users.username=images.userId where images.imgId = :imgid');
         $access->bindParam(':imgid', $img);
@@ -479,7 +479,7 @@ function commentemail($img, $conn, $email) {
         $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
         $from = "Confidence";
-        $to = $email;
+        $to = $user['email'];
 
         $host = "ssl://smtp.gmail.com";
         $port = "465";
