@@ -8,10 +8,10 @@
             </button>
             <select id="photo-filter" class="select">
                 <option value="none">Normal</option>
-                <option value="./images/posableimgs/blackhearts.png">Black Hearts</option>
-                <option value="./images/posableimgs/devil.png">Devil Horns</option>
-                <option value="./images/posableimgs/fox.png">Fox</option>
-                <option value="./images/posableimgs/dog.png">Dog</option>
+                <option value="./images/posableimgs/lion.png">Lion King</option>
+                <option value="./images/posableimgs/orca.png">Killer Whale</option>
+                <option value="./images/posableimgs/penguin.png">Madagascar Penguins</option>
+                <option value="./images/posableimgs/iguana.png">Iguana</option>
             </select>
             <button id="clear-button" class="btn btn-light">Clear</button>
             <canvas id="canvas"></canvas>

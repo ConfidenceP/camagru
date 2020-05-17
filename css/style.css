@@ -31,10 +31,10 @@ ul {
 
 header {
     background: #35424a;
-    color: #ffffff;
+    color: #faebd7;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: 3px solid #e8491d;
+    border-bottom: 3px solid #6495ed;
 }
 
 header a {
@@ -62,7 +62,7 @@ header nav {
 }
 
 header .current a {
-    color: red;
+    color: #6495ed;
     font-weight: bold;
 }
 
@@ -98,7 +98,7 @@ header .current a {
     height: 300px;
     margin: 5px;
     padding: 5px;
-    border: 1px dotted #e8491d;
+    border: 1px solid #6495ed;
 }
 
 .gallery-desc {
@@ -107,15 +107,15 @@ header .current a {
 
 .fa-comments,
 .fa-trash {
-    color: #e8491d;
+    color: #6495ed;
 }
 
 .fa-heart {
-    color: #4CAF50;
+    color: #808080;
 }
 
 .liked {
-    color: #e8491d;
+    color: #6495ed;
 }
 
 
@@ -125,7 +125,7 @@ footer {
     padding: 20px;
     margin-top: 20px;
     color: #ffffff;
-    background-color: #e8491d;
+    background-color: #6495ed;
     text-align: center;
 }
 
@@ -170,7 +170,7 @@ button:hover {
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: #6495ed;
 }
 
 span.psw {
@@ -231,7 +231,7 @@ span.psw {
 
 .close:hover,
 .close:focus {
-    color: red;
+    color: #6495ed;
     cursor: pointer;
 }
 
@@ -305,7 +305,7 @@ span.psw {
 }
 
 .red {
-    background-color: #f44336;
+    background-color: #6495ed;
     /* Red */
 }
 
@@ -421,7 +421,7 @@ div.content {
     right: 0;
     padding: 5px 10px;
     border-radius: 50%;
-    background: red;
+    background: #6495ed;
     color: white;
 }
 
@@ -479,7 +479,7 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #6495ed;
 }
 
 li.dropdown {

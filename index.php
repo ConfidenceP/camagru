@@ -24,11 +24,11 @@ $pages =  ceil($total / $perpage);
             <?php elseif ($_GET['usernameexists']): ?>
                 <p class="alert red"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>The username is taken!</p>
             <?php elseif ($_GET['login_error']): ?>
-                <p class="alert red"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>There was an error signing in!</p>
+                <p class="alert red"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Wrong username or password provided! Click Login to try again or Register to create an account.</p>
             <?php elseif ($_GET['register']): ?>
                 <p class="alert success"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Account created successfully! Follow instructions sent to your email to activate account.</p>
             <?php elseif ($_GET['active']): ?>
-                <p class="alert success"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Account is aleady activated!</p>
+                <p class="alert success"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Account is already activated!</p>
             <?php elseif ($_GET['activated']): ?>
                 <p class="alert success"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Account successfully activated!</p>
             <?php elseif ($_GET['inactive']): ?>
@@ -42,7 +42,7 @@ $pages =  ceil($total / $perpage);
             <?php elseif ($_GET['pwdreset']): ?>
                 <p class="alert success"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Password Reset email sent!</p>
             <?php elseif ($_GET['accountdelete']): ?>
-                <p class="alert success"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Account Deleted successfully!! Pheeeeeeew!!! finally you are gone</p>
+                <p class="alert success"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>You account has been successfully removed. To use some Camagru services you will have to register again.</p>
             <?php endif; ?>
             <h1>Welcome to Camagru</h1>
         </div>

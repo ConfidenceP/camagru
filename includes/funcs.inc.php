@@ -415,7 +415,7 @@ function regmail($email, $token) {
     $subject = 'Activate your Camagru account';
 
     // Message
-    $body = 'Activate your Camagru account. To activate your Camagru account click <a href="http://localhost:8080/camagru/includes/activate.php?activate='. $token.'">here.</a>';
+    $body = 'Activate your Camagru account by clicking the following link: http://localhost:8080/camagru/includes/activate.php?activate='. $token .'';
     // To send HTML mail, the Content-type header must be set
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
@@ -446,7 +446,7 @@ function regmail($email, $token) {
 
 }
 
-function commentemail($img, $conn) {
+function commentemail($img, $conn, $email) {
     try{
         $access = $conn->prepare('SELECT users.email, users.notify FROM users INNER JOIN images ON users.username=images.userId where images.imgId = :imgid');
         $access->bindParam(':imgid', $img);
@@ -479,7 +479,7 @@ function commentemail($img, $conn) {
         $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
         $from = "Confidence";
-        $to = 'cmcmukwindidza26@gmail.com';
+        $to = $email;
 
         $host = "ssl://smtp.gmail.com";
         $port = "465";
