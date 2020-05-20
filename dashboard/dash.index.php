@@ -22,7 +22,19 @@
             <div id="photos"></div>
         </div>
     </div>
+    <div class="col span_1_of_2">
+        <div class="bottom-container">
+            <div class="container gallery-container">
+                <?php if($myimages):foreach($myimages as $image): ?>
+                    <div class="gallery-item">
+                        <a href=""><img src="./images/public/<?= $image['imgName'];?>" alt="" style="width: 200px;"></a>
+                    </div>
+                <?php endforeach;else: echo "No images, take your first picture <h3><a href='dashboard.php'>HERE</a></h3>";endif; ?>
+            </div>
+        </div>
+    </div>
 </div>
+
 <script>
     //Global Variable
     let width = 400;
